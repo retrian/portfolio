@@ -208,7 +208,7 @@ function App() {
             <h1>
               <span>Hello,</span>
               <span>I'm Ian</span>
-              <span>Welcome to my profolio!</span>
+              <span>Welcome to my Portfolio!</span>
             </h1>
 
             <div className="social-links" aria-label="Social links">
