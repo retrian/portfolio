@@ -1,0 +1,98 @@
+:root {
+  font-family: 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.55;
+  font-weight: 400;
+  color: #d1d5db;
+  background:
+    radial-gradient(circle at top, rgba(29, 78, 216, 0.2), transparent 32%),
+    radial-gradient(circle at 80% 20%, rgba(168, 85, 247, 0.18), transparent 25%),
+    #05070d;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --page-width: 1280px;
+  --heading: #f8fafc;
+  --body: #cbd5e1;
+  --muted: #94a3b8;
+  --accent: #a78bfa;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  color: var(--body);
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.08) 0 1px, transparent 1px),
+    radial-gradient(circle at 80% 30%, rgba(255, 255, 255, 0.06) 0 1px, transparent 1px),
+    radial-gradient(circle at 50% 70%, rgba(255, 255, 255, 0.07) 0 1px, transparent 1px),
+    var(--bg, #05070d);
+  background-size: 220px 220px, 260px 260px, 320px 320px, auto;
+}
+
+a,
+button {
+  font: inherit;
+}
+
+#root {
+  width: min(100%, var(--page-width));
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--heading);
+}
+
+h1 {
+  font-size: clamp(3rem, 7vw, 5rem);
+  line-height: 1.08;
+  letter-spacing: -0.05em;
+  margin-bottom: 18px;
+  font-family: 'IBM Plex Mono', 'Consolas', monospace;
+}
+
+h2 {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  line-height: 1.15;
+  letter-spacing: -0.04em;
+  max-width: 18ch;
+}
+
+h3 {
+  font-size: 1.2rem;
+  line-height: 1.25;
+}
+
+p {
+  color: var(--body);
+}
+
+::selection {
+  background: rgba(167, 139, 250, 0.35);
+}
+
+@media (max-width: 760px) {
+  h2 {
+    max-width: none;
+  }
+}

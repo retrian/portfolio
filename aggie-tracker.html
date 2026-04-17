@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aggie Tracker</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #05070d;
+        --accent: #93c5fd;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: var(--bg);
+        font-family: Inter, Segoe UI, Arial, sans-serif;
+      }
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background: rgba(6, 8, 14, 0.74);
+        backdrop-filter: blur(18px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      }
+
+      .site-header-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        padding: 18px 48px;
+      }
+
+      .brand,
+      .site-nav a {
+        color: #f8fafc;
+        text-decoration: none;
+      }
+
+      .brand {
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        white-space: nowrap;
+      }
+
+      .site-nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 32px;
+        margin-left: auto;
+      }
+
+      .site-nav a {
+        font-family: "IBM Plex Mono", Consolas, monospace;
+        font-size: 0.96rem;
+        letter-spacing: 0.08em;
+        text-transform: lowercase;
+      }
+
+      .back {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 56px;
+        height: 56px;
+        margin: 28px;
+        color: var(--accent);
+        text-decoration: none;
+        font-size: 2rem;
+      }
+
+      @media (max-width: 760px) {
+        .site-header-inner {
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 14px 24px;
+        }
+
+        .site-nav {
+          gap: 14px 18px;
+          margin-left: 0;
+          justify-content: flex-start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header-inner">
+        <a class="brand" href="/">Ian Torres</a>
+        <nav class="site-nav" aria-label="Primary">
+          <a href="/#home">home</a>
+          <a href="/#about">about</a>
+          <a href="/#career">career</a>
+          <a href="/#papers">papers</a>
+          <a href="/#projects">projects</a>
+          <a href="/#coursework">coursework</a>
+        </nav>
+      </div>
+    </header>
+    <a class="back" href="/" aria-label="Back to portfolio">←</a>
+  </body>
+</html>
