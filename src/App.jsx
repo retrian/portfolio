@@ -92,7 +92,7 @@ const projects = [
     title: 'Regression Analysis of Minimum Wage',
     stack: 'R / SQL / Power BI',
     accent: 'RM',
-    href: `${baseUrl}minimum-wage.html`,
+    href: `${baseUrl}minimum-wage/`,
     description:
       'Used SQL to organize and query data, R to clean the dataset and run multivariate regression analysis, and Power BI to visualize findings on employment, pricing, and business outcomes.',
   },
@@ -100,7 +100,7 @@ const projects = [
     title: 'Aggie Tracker',
     stack: 'JS / SQL / CSS',
     accent: 'AT',
-    href: `${baseUrl}aggie-tracker.html`,
+    href: `${baseUrl}aggie-tracker/`,
     description:
       'Developed a player analytics website using JavaScript, SQL, and CSS to track performance across ~130 players and ~33,000 matches over 6 months. Built a leaderboard and structured match database, while automating KPI refreshes to improve reporting, surface trends, and support clearer performance analysis.',
   },
