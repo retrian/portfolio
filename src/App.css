@@ -82,17 +82,23 @@
 .hero-section {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(280px, 440px) minmax(320px, 1fr);
+  grid-template-columns: minmax(260px, 320px) minmax(320px, 640px);
   align-items: center;
   gap: 72px;
   padding: 80px 48px 112px;
   min-height: calc(100svh - var(--header-space));
   scroll-margin-top: 120px;
+  justify-content: center;
 }
 
 .hero-copy {
   order: 2;
-  max-width: 620px;
+  max-width: 640px;
+}
+
+.hero-copy h1 {
+  font-size: clamp(2.2rem, 6vw, 4.1rem);
+  max-width: 100%;
 }
 
 .hero-copy h1 span {
@@ -120,6 +126,7 @@
 
 .social-links {
   display: flex;
+  flex-wrap: wrap;
   gap: 16px;
   margin-top: 32px;
 }
@@ -512,6 +519,10 @@
   margin: 0 0 10px;
 }
 
+.project-content {
+  min-width: 0;
+}
+
 .project-content p {
   margin: 0;
   color: var(--muted);
@@ -630,7 +641,7 @@
 
 @media (max-width: 760px) {
   .app-shell {
-    --header-space: 91px;
+    --header-space: 150px;
   }
 
   .site-header-inner {
@@ -640,10 +651,19 @@
     padding: 14px 24px;
   }
 
+  .brand {
+    font-size: 1.45rem;
+  }
+
   .site-nav {
+    width: 100%;
     justify-content: flex-start;
     gap: 14px 18px;
     margin-left: 0;
+  }
+
+  .site-nav a {
+    font-size: 0.88rem;
   }
 
   .hero-section,
@@ -653,12 +673,64 @@
 
   .hero-section {
     min-height: auto;
+    gap: 28px;
     padding-bottom: 88px;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(2rem, 12vw, 3.6rem);
+  }
+
+  .hero-copy h1 span {
+    white-space: normal;
+  }
+
+  .social-links {
+    gap: 12px;
+  }
+
+  .social-links a {
+    width: 44px;
+    height: 44px;
+  }
+
+  .social-links .resume-button {
+    min-width: 96px;
+    padding: 0 12px;
   }
 
   .hero-visual {
     gap: 14px;
     min-height: auto;
+  }
+
+  .portrait-ring {
+    width: min(78vw, 260px);
+  }
+
+  .paper-card,
+  .coursework-row,
+  .project-card {
+    padding: 16px;
+  }
+
+  .project-card {
+    gap: 16px;
+  }
+
+  .project-visual {
+    width: 100%;
+    max-width: 220px;
+  }
+
+  .project-tags,
+  .career-skills {
+    gap: 8px;
+  }
+
+  .career-logo {
+    width: 44px;
+    height: 44px;
   }
 
   .card-topline {
