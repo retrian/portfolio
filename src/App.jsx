@@ -5,6 +5,8 @@ import profilePicture from './assets/profile picture.webp'
 import wellboreLogo from './assets/wellbore_integrity_solutions_logo.jpg'
 import './App.css'
 
+const baseUrl = import.meta.env.BASE_URL
+
 const navItems = [
   { label: 'home', href: '#home' },
   { label: 'about', href: '#about' },
@@ -72,14 +74,14 @@ const papers = [
   {
     title: 'Minimum Wage and Business Impact',
     meta: 'Dec 2024',
-    href: '/Minimum%20Wage%20and%20Business%20Impact.pdf',
+    href: `${baseUrl}Minimum%20Wage%20and%20Business%20Impact.pdf`,
     summary:
       'This paper analyzes how minimum wage increases affect employment, pricing, and business stability, finding that smaller and family-owned businesses face greater strain than larger firms.',
   },
   {
     title: 'International Institutions and Climate Economics',
     meta: 'Dec 2023',
-    href: '/Utilizing%20International%20Economic%20Institutions%20to%20Curb%20Economic%20Impacts%20of%20Climate%20Change%20FINAL%20PAPER.pdf',
+    href: `${baseUrl}Utilizing%20International%20Economic%20Institutions%20to%20Curb%20Economic%20Impacts%20of%20Climate%20Change%20FINAL%20PAPER.pdf`,
     summary:
       'This paper analyzes the effectiveness of the IMF and United Nations in mitigating the economic effects of climate change and finds that stronger policy mechanisms, enforcement tools, and climate-linked financial reforms are needed to improve outcomes.',
   },
@@ -90,7 +92,7 @@ const projects = [
     title: 'Regression Analysis of Minimum Wage',
     stack: 'R / SQL / Power BI',
     accent: 'RM',
-    href: '/minimum-wage.html',
+    href: `${baseUrl}minimum-wage.html`,
     description:
       'Used SQL to organize and query data, R to clean the dataset and run multivariate regression analysis, and Power BI to visualize findings on employment, pricing, and business outcomes.',
   },
@@ -98,7 +100,7 @@ const projects = [
     title: 'Aggie Tracker',
     stack: 'JS / SQL / CSS',
     accent: 'AT',
-    href: '/aggie-tracker.html',
+    href: `${baseUrl}aggie-tracker.html`,
     description:
       'Developed a player analytics website using JavaScript, SQL, and CSS to track performance across ~130 players and ~33,000 matches over 6 months. Built a leaderboard and structured match database, while automating KPI refreshes to improve reporting, surface trends, and support clearer performance analysis.',
   },
@@ -223,7 +225,7 @@ function App() {
               </a>
               <a
                 className="resume-button"
-                href="/Ian-Torres-Resume.pdf"
+                href={`${baseUrl}Ian-Torres-Resume.pdf`}
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Resume"
